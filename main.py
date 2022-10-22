@@ -1,16 +1,8 @@
 """main module"""
-from enum import Enum, unique
 import time
 import questionary
 from alive_progress import alive_bar
-
-@unique
-class Profession(Enum):
-  """enum type of player profession"""
-  BLADE = "剣士"
-  MAGIC_CASTER = "魔法使い"
-  WARRIOR = "戦士"
-  DEPRIVED = "持たざるもの"
+from interfaces.player import Profession
 
 class Player:
   """All Player Status Here"""
