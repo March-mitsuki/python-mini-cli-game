@@ -41,7 +41,7 @@ class Enemy:
       self.drop_exp = math.ceil(100 + ( 100 * (player_level/100)))
     elif self.enemy_type == EnemyType.ANCIENT_MACHIEN:
       self.hit_point = math.ceil(100 + ( 100 * (player_level/10)))
-      self.acctack = 100 + ( 100 * player_level/100)
+      self.acctack = 200 + ( 200 * player_level/100)
       self.magic_point = 0 * player_level
       self.shield = 100 * player_level
       self.drop_exp = math.ceil(1000 + ( 1000 * (player_level/100)))
