@@ -40,7 +40,7 @@ class Player:
       # 魔法使いは攻撃力が高いが、MP消耗してしまい、長期戦に長けていない
       self.hit_point = 50
       self.max_hit_point = 50
-      self.acctack = 30
+      self.acctack = 8
       self.magic_point = 10
       self.max_magic_point = 10
       self.shield = 0
@@ -92,3 +92,19 @@ class Player:
     )
     self.magic_point = self.max_magic_point
     self.shield += 1
+
+  def attack_profession(self) -> int:
+    """perform different kinds of attacks depending on the profession"""
+    if self.profession == Profession.MAGIC_CASTER:
+      if self.magic_point >= 0:
+        attack_point = self.acctack * 3
+        self.magic_point -= 5
+      else:
+        attack_point = self.acctack
+    else:
+      if self.magic_point >= 0:
+        attack_point = self.acctack * 1.5
+        self.magic_point = self.magic_point - 5
+      else:
+        attack_point = self.acctack
+    return attack_point

@@ -95,13 +95,13 @@ def battle(_player: Player, _enemy: Enemy) -> bool:
   """battle _player with enemy"""
   print(f"{_enemy.enemy_type.value}と戦闘中...")
   while True:
-    _enemy.hit_point -= _player.acctack
+    _enemy.hit_point -= _player.attack_profession()
     with alive_bar(100, dual_line=True, title="", receipt=False) as a_bar:
       a_bar.text = f"{_player.name} が攻撃している..."
       for _ in range(100):
         time.sleep(0.01)
         a_bar()
-    print(f"{_enemy.enemy_type.value} に対して {_player.acctack} ダメージを与えた")
+    print(f"{_enemy.enemy_type.value} に対して {_player.attack_profession()} ダメージを与えた")
     print(
       f"-- {_player.name}のHP: {_player.hit_point} - " +
       f"{_enemy.enemy_type.value}のHP: {_enemy.hit_point} --"
@@ -247,6 +247,15 @@ def end_of_the_strory():
 
   questionary.print(
     "つまり、飴と鞭、戦争をするための戦争だ",
+    "bold italic fg:#9EC545"
+  )
+  with alive_bar(100, dual_line=True, title="", receipt=False) as a_bar:
+    for _ in range(100):
+      time.sleep(0.03)
+      a_bar()
+
+  questionary.print(
+    "そしてあなたは、MagicStoneによって何度も蘇生され、その戦争に付き合わされた",
     "bold italic fg:#9EC545"
   )
   with alive_bar(100, dual_line=True, title="", receipt=False) as a_bar:
