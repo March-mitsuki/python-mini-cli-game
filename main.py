@@ -26,16 +26,16 @@ def create_player() -> Player:
     ]
   ).ask()
 
-  # with alive_bar(100, title="世界をロード中...") as a_bar:
-  #   for i in range(100):
-  #     if i == 30:
-  #       a_bar.title = "少女祈祷中..."
-  #     if i == 60:
-  #       a_bar.title = "勇者を召喚中..."
-  #     if i == 99:
-  #       a_bar.title = "勇者帰来"
-  #     time.sleep(0.05)
-  #     a_bar()
+  with alive_bar(100, title="世界をロード中...") as a_bar:
+    for i in range(100):
+      if i == 30:
+        a_bar.title = "少女祈祷中..."
+      if i == 60:
+        a_bar.title = "勇者を召喚中..."
+      if i == 99:
+        a_bar.title = "勇者帰来"
+      time.sleep(0.05)
+      a_bar()
 
   if player_name and prof:
     _player = Player(player_name, prof)
@@ -51,35 +51,35 @@ def create_player() -> Player:
     "bold italic fg:#F5D300"
   )
 
-  # print("あなたは勇者としてこの世界に召喚された")
-  # with alive_bar(100, dual_line=True, length=30, title="", receipt=False) as a_bar:
-  #   for _ in range(100):
-  #     time.sleep(0.03)
-  #     a_bar()
+  print("あなたは勇者としてこの世界に召喚された")
+  with alive_bar(100, dual_line=True, length=30, title="", receipt=False) as a_bar:
+    for _ in range(100):
+      time.sleep(0.03)
+      a_bar()
 
-  # print("どうやらこの世界が危機に陥ったようだ")
-  # with alive_bar(100, dual_line=True, title="", receipt=False) as a_bar:
-  #   for _ in range(100):
-  #     time.sleep(0.03)
-  #     a_bar()
+  print("どうやらこの世界が危機に陥ったようだ")
+  with alive_bar(100, dual_line=True, title="", receipt=False) as a_bar:
+    for _ in range(100):
+      time.sleep(0.03)
+      a_bar()
 
-  # print("あなたはやりたくないと思いながらも、やらないといけないという使命感に襲われた")
-  # with alive_bar(100, dual_line=True, title="", receipt=False) as a_bar:
-  #   for _ in range(100):
-  #     time.sleep(0.03)
-  #     a_bar()
+  print("あなたはやりたくないと思いながらも、やらないといけないという使命感に襲われた")
+  with alive_bar(100, dual_line=True, title="", receipt=False) as a_bar:
+    for _ in range(100):
+      time.sleep(0.03)
+      a_bar()
 
-  # print("あなたが目を醒めて、国王の言う通り世界を脅かす「魔王」を倒す旅に出た")
-  # with alive_bar(100, dual_line=True, title="", receipt=False) as a_bar:
-  #   for _ in range(100):
-  #     time.sleep(0.03)
-  #     a_bar()
+  print("あなたが目を醒めて、国王の言う通り世界を脅かす「魔王」を倒す旅に出た")
+  with alive_bar(100, dual_line=True, title="", receipt=False) as a_bar:
+    for _ in range(100):
+      time.sleep(0.03)
+      a_bar()
 
-  # print("これが、劇の始まりのであった...")
-  # with alive_bar(100, dual_line=True, title="", receipt=False) as a_bar:
-  #   for _ in range(100):
-  #     time.sleep(0.03)
-  #     a_bar()
+  print("これが、劇の始まりのであった...")
+  with alive_bar(100, dual_line=True, title="", receipt=False) as a_bar:
+    for _ in range(100):
+      time.sleep(0.03)
+      a_bar()
 
   return _player
 
@@ -318,10 +318,6 @@ if __name__ == "__main__":
       enemy_name_list.append(enemy.value)
 
     PLAYER = create_player()
-
-    # PLAYER.acctack = 200
-    # PLAYER.level = 19
-    # death_times = 99
 
     random_enemy = create_random_enemy()
     while True:
