@@ -23,7 +23,7 @@ class Enemy:
       self.drop_exp = math.ceil(10 + ( 10 * (player_level/100)))
     elif self.enemy_type == EnemyType.GOBLIN_SENIOR:
       self.hit_point = math.ceil(100 + ( 100 * (player_level/10)))
-      self.acctack = math.ceil(20 + ( 20 * player_level/100))
+      self.acctack = math.ceil(20 + ( 20 * player_level/10))
       self.magic_point = 10 * player_level
       self.shield = 10 * player_level
       self.drop_exp = math.ceil(80 + ( 80 * (player_level/100)))
@@ -40,8 +40,8 @@ class Enemy:
       self.shield = 50 * player_level
       self.drop_exp = math.ceil(100 + ( 100 * (player_level/100)))
     elif self.enemy_type == EnemyType.ANCIENT_MACHIEN:
-      self.hit_point = math.ceil(100 + ( 100 * (player_level/10)))
-      self.acctack = 200 + ( 200 * player_level/100)
+      self.hit_point = math.ceil(500 + ( 500 * (player_level/10)))
+      self.acctack = 100 + ( 100 * player_level/10)
       self.magic_point = 0 * player_level
       self.shield = 100 * player_level
       self.drop_exp = math.ceil(1000 + ( 1000 * (player_level/100)))
