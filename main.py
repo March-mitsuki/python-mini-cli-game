@@ -50,32 +50,42 @@ def create_player() -> Player:
     f"よくぞ来てくれた! {_player.name}様! さぁ、旅を続けよう!",
     "bold italic fg:#F5D300"
   )
-
-  print("あなたは勇者としてこの世界に召喚された")
   with alive_bar(100, dual_line=True, length=30, title="", receipt=False) as a_bar:
     for _ in range(100):
       time.sleep(0.03)
       a_bar()
 
-  print("どうやらこの世界が危機に陥ったようだ")
+  questionary.print("あなたは勇者としてこの世界に召喚された", "bold italic fg:#9EC545")
+  with alive_bar(100, dual_line=True, length=30, title="", receipt=False) as a_bar:
+    for _ in range(100):
+      time.sleep(0.03)
+      a_bar()
+
+  questionary.print("どうやらこの世界が危機に陥ったようだ", "bold italic fg:#9EC545")
   with alive_bar(100, dual_line=True, title="", receipt=False) as a_bar:
     for _ in range(100):
       time.sleep(0.03)
       a_bar()
 
-  print("あなたはやりたくないと思いながらも、やらないといけないという使命感に襲われた")
+  questionary.print(
+    "あなたはやりたくないと思いながらも、やらないといけないという使命感に襲われた",
+    "bold italic fg:#9EC545"
+  )
   with alive_bar(100, dual_line=True, title="", receipt=False) as a_bar:
     for _ in range(100):
       time.sleep(0.03)
       a_bar()
 
-  print("あなたが目を醒めて、国王の言う通り世界を脅かす「魔王」を倒す旅に出た")
+  questionary.print(
+    "あなたが目を醒めて、国王の言う通り世界を脅かす「魔王」を倒す旅に出た",
+    "bold italic fg:#9EC545"
+  )
   with alive_bar(100, dual_line=True, title="", receipt=False) as a_bar:
     for _ in range(100):
       time.sleep(0.03)
       a_bar()
 
-  print("これが、劇の始まりのであった...")
+  questionary.print("これが、劇の始まりのであった...", "bold italic fg:#9EC545")
   with alive_bar(100, dual_line=True, title="", receipt=False) as a_bar:
     for _ in range(100):
       time.sleep(0.03)
